@@ -15,8 +15,6 @@ use move_bytecode_utils::module_cache::GetModule;
 use move_core_types::{language_storage::ModuleId, resolver::ModuleResolver};
 use std::collections::BTreeMap;
 
-// TODO: We should use AuthorityTemporaryStore instead.
-// Keeping this functionally identical to AuthorityTemporaryStore is a pain.
 #[derive(Debug, Default)]
 pub struct InMemoryStorage {
     persistent: BTreeMap<ObjectID, Object>,
